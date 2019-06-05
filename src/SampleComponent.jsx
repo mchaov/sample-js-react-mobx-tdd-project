@@ -11,13 +11,11 @@ class SampleComponent extends Component {
         super(props);
         this.test = "test";
     }
-    /**
-     * More than standard ecma
-     */
-    updateTest = () => {
-        return this.test = "test" + Date.now();
-    };
 
+    @action.bound updateTest() {
+        return this.test = "test" + Date.now();
+    }
+    
     render() {
 
         return <>
