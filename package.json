@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --progress --hot --profile --colors --inspect --config webpack.config.dev.js",
-    "build": "NODE_ENV=production webpack  --colors  --progress --display-error-details --config ./webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --profile --colors --inspect --config webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack  --colors  --progress --display-error-details --config ./webpack.config.js",
     "deploy": "npx surge dist",
     "test": "node scripts/test.js",
     "test:coverage": "node scripts/test.js --coverage --verbose"
@@ -42,6 +42,7 @@
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
